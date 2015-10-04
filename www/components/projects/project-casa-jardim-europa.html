@@ -1,0 +1,49 @@
+<ion-view class="projects-bg">
+    <ion-content>
+        <div class="page">
+            <div class="icon-menu">
+                <a href="#/projetos">
+                    <img src="./assets/img/icon-menu-projects.png" />
+                </a>
+            </div>
+            <div class="image image-project">
+                <div class="left-arrow" data-ng-click="vm.movePrevious();">
+                    <a href=""><img src="./assets/img/arrow-left.png" /></a>
+                </div>
+                <ion-slide-box does-continue="true" active-slide="vm.currentIndex">
+                    <ion-slide>
+                        <div class="box"><img src="./assets/img/projeto-casa-jardim-europa-1.jpg" /></div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div class="box"><img src="./assets/img/projeto-casa-jardim-europa-2.jpg" /></div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div class="box"><img src="./assets/img/projeto-casa-jardim-europa-3.jpg" /></div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div class="box"><img src="./assets/img/projeto-casa-jardim-europa-4.jpg" /></div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div class="box"><img src="./assets/img/projeto-casa-jardim-europa-5.jpg" /></div>
+                    </ion-slide>
+                </ion-slide-box>
+                <div class="right-arrow" data-ng-click="vm.moveNext();">
+                    <a href=""><img src="./assets/img/arrow-right.png" /></a>
+                </div>
+            </div>
+            <div class="content content-projects">
+                <div class="body-center">
+                    <div class="page-title page-title-casa-jardim-europa">
+                        <img src="./assets/img/title-projeto-casa-jardim-europa.png" />
+                    </div>
+                    <div class="line vertical-line vertical-line-projects"></div>
+                    <div class="description">
+                        Projeto de design realizado em 
+                        uma casa o bairro 
+                        Jardim Europa (SP)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

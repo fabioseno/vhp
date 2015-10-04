@@ -1,0 +1,23 @@
+{
+  "name": "vhp",
+  "version": "1.0.0",
+  "homepage": "https://github.com/fabioseno/vhp",
+  "authors": [
+    "Fábio Akira Yoshida <fabioseno@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.4",
+    "angular-ui-router": "~0.2.15",
+    "bootstrap": "~3.3.5",
+    "ionic": "~1.1.0",
+    "jquery-touchswipe": "~1.6.9"
+  }
+}
