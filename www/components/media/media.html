@@ -1,13 +1,13 @@
 <ion-view class="media-bg">
+    <div class="icon-menu">
+        <a href="#/menu">
+            <img src="./assets/img/icon-menu-media.png" />
+        </a>
+    </div>
     <ion-content>
         <div class="page">
-            <div class="icon-menu">
-                <a href="#/menu">
-                    <img src="./assets/img/icon-menu-media.png" />
-                </a>
-            </div>
-            <div class="image image-media">
-                <div class="left-arrow" data-ng-click="vm.movePrevious();">
+            <div class="main-image-container">
+                <div class="arrow left-arrow" data-ng-click="vm.movePrevious();">
                     <a href="#"><img src="./assets/img/arrow-left.png" /></a>
                 </div>
                 <ion-slide-box does-continue="true" active-slide="vm.currentIndex">
@@ -36,11 +36,11 @@
                         <div class="box"><img src="./assets/img/media-08.jpg" /></div>
                     </ion-slide>
                 </ion-slide-box>
-                <div class="right-arrow" data-ng-click="vm.moveNext();">
+                <div class="arrow right-arrow" data-ng-click="vm.moveNext();">
                     <a href="#"><img src="./assets/img/arrow-right.png" /></a>
                 </div>
             </div>
-            <div class="content content-media">
+            <div class="content main-content media-bg">
                 <div class="body-center">
                     <div class="page-title page-title-media">
                         <img src="./assets/img/title-media.png" />

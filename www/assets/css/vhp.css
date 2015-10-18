@@ -2,19 +2,18 @@ body, .pane {
     border: 8px solid #dedede;    
 }
 
-html, body, div.full-height {
-    /*    display: inline-flex;*/
+.scroll {
+    height: 100%;
+}
+
+
+html, body {
     width: 100%;
     height: 100%;
 }
 
-div.half-screen-row {
-    display: block;
-    height: 50%;
-}
-
 .row {
-/*
+    /*
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -22,7 +21,7 @@ div.half-screen-row {
     display: flex; */
     height: 50%;
     padding: 0px;
-
+    overflow: hidden;
 }
 
 .container-fluid {
@@ -31,19 +30,72 @@ div.half-screen-row {
     padding: 0px;
 }
 
-.bg, .menu-item {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex; 
+.menu-item {
+    flex: 1;
+    height: 100%;
+    position: relative;
+}
+
+.menu-item-contact {
+    flex: 2;
+}
+
+.bg {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+}
+
+.footer-text {
+    font-family: 'roboto-light-webfont';
+    font-size: 13px;
+    color: white;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+.menu-vhp {
+    background-position: left bottom;
+}
+
+.menu-services {
+    background-position: right bottom;
+}
+
+.menu-media {
+    background-position: center top;
+}
+
+.menu-contact {
+    background-position: right bottom;
+}
+
+.menu-text {
+    font-family: 'robotothin';
+    position: absolute;
+    color: white;
+    top: 40%;
+    /*    transform: translateY(-40%);*/
+    text-align: left;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu-text span {
+    text-align: left;
+}
+
+.bg img {
+    visibility: hidden;
 }
 
 .row + .row {
-/*
+    /*
     margin-top: 0px;
     padding-top: 0;
-*/
+    */
 }
 
 
@@ -52,15 +104,20 @@ div.half-screen-row {
 }
 
 .icon-menu {
-    position: absolute;
+    position: fixed;
     top: 22px;
     left: 22px;
     z-index: 1;
 }
 
-.image img {
-    display: block;
+.bg-image {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
+    height: 60%;
 }
 
 .body-center {
@@ -74,6 +131,10 @@ div.half-screen-row {
 }
 
 .content {
+    /*
+    position: fixed;
+    bottom: 0px;
+    */
     font-family: 'roboto-light-webfont';
     text-align: justify;
     font-size: 17px;
@@ -84,6 +145,24 @@ div.half-screen-row {
     display: -ms-flexbox;      /* TWEENER - IE 10 */
     display: -webkit-flex;     /* NEW - Chrome */
     display: flex; 
+    width: 100%;
+}
+
+.main-image-container {
+    height: 60%;
+}
+
+.main-image-container .box {
+    height: 100%;
+    text-align: center;
+}
+
+.main-image-container img {
+    height: 100%;
+}
+
+.main-content {
+    height: 40%;
 }
 
 .page-title {
@@ -117,12 +196,12 @@ div.half-screen-row {
 }
 
 /* Who */
-.image-who {
-    width: 100%;
+.who-bg {
+    background-color: #974f53;
 }
 
-.content-who {
-    background-color: #974f53;
+.image-who {
+    background-image: url('../img/bg-who.jpg');
 }
 
 .vertical-line-who {
@@ -133,8 +212,108 @@ img.linkedin {
     margin: 5px;
 }
 
+.menu-text-vhp-container {
+    top: 20%;
+    min-width: 225px;
+    left: 56%;
+}
+
+span.menu-vhp-victor {
+    font-size: 60px;
+}
+
+span.menu-vhp-hugo {
+    display: block;
+    font-size: 40px;
+}
+
+/* Projects */
+.projects-bg {
+    background-color: #b07f20;
+}
+
+.content-projects {
+    background-color: #b07f20;
+}
+
+.vertical-line-projects {
+    border-left: 1px solid #ecab2c;
+}
+
+.menu-text-projects-container {
+    top: 30%;
+}
+
+span.menu-projects-my {
+    font-size: 40px;
+    line-height: 50px;
+}
+
+span.menu-projects-projects {
+    display: block;
+    font-size: 60px;
+    line-height: 30px;
+    margin-left: 15px;
+}
+
+/* Design */
+.column {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.image-design {
+    background-image: url('../img/bg-design.jpg');
+    background-position: left bottom;
+}
+
+.design-bg {
+    background-color: #467c77;
+}
+
+.design-description {
+    width: 100%;
+    -webkit-flex: 1;          /* Chrome */
+    -ms-flex: 1; 
+    flex: 1;
+}
+
+.menu-text-services-container {
+    
+}
+
+span.menu-services {
+    font-size: 50px;
+}
+
+/* Consultoria */
+.image-consultoria img {
+    width: 100%;
+}
+
+.image-consultoria {
+    background-image: url('../img/bg-consultoria.jpg');
+    background-position: right center;
+}
+
+.consultoria-bg {
+    background-color: #b48324;
+}
+
+.vertical-line-consultoria {
+    border-left: 1px solid #fab52f;
+}
+
+.consultoria-description {
+    width: 100%;
+    -webkit-flex: 1;          /* Chrome */
+    -ms-flex: 1; 
+    flex: 1;
+}
+
 /* Media */
-.content-media {
+.media-bg {
     background-color: #3b5f6f;
 }
 
@@ -157,6 +336,10 @@ img.linkedin {
     width: 100%;
 }
 
+.slider {
+    height: 100%;
+}
+
 .slider-slides {
     /*    top: 40px;*/
 }
@@ -169,78 +352,52 @@ img.linkedin {
     color: white;
 }
 
-.left-arrow {
-    top: 260px;
-    left: 45px;
+.arrow {
+    top: 20%;
     position: absolute;
     z-index: 1;
     background-color: white;
     padding: 10px;
     opacity: 0.7;
+}
+
+.left-arrow {
+    left: 45px;
 }
 
 .right-arrow {
-    top: 260px;
     right: 45px;
-    position: absolute;
-    z-index: 1;
-    background-color: white;
-    padding: 10px;
-    opacity: 0.7;
 }
 
-/* Design */
-.column {
-    width: 50%;
-    float: left;
+.menu-text-media-container {
+    top: 50%;
 }
 
-.image-design img {
-    width: 100%;
+span.menu-media-media {
+    font-size: 50px;
 }
 
-.content-design {
-    background-color: #467c77;
+span.menu-media-and {
+    display: block;
+    margin-left: 115px;
+    font-size: 34px;
+    margin-top: -14px;
 }
 
-.design-description {
-    width: 100%;
-    -webkit-flex: 1;          /* Chrome */
-    -ms-flex: 1; 
-    flex: 1;
-}
-
-/* Consultoria */
-.image-consultoria img {
-    width: 100%;
-}
-
-.content-consultoria {
-    background-color: #b48324;
-}
-
-.vertical-line-consultoria {
-    border-left: 1px solid #fab52f;
-}
-
-.consultoria-description {
-    width: 100%;
-    -webkit-flex: 1;          /* Chrome */
-    -ms-flex: 1; 
-    flex: 1;
-}
-
-/* Projects */
-.content-projects {
-    background-color: #b07f20;
-}
-
-.vertical-line-projects {
-    border-left: 1px solid #ecab2c;
+span.menu-media-releases {
+    display: block;
+    font-size: 50px;
+    margin-left: 15px;
+    margin-top: 5px;
 }
 
 /* Contact */
-.content-contact {
+.image-contact {
+    background-image: url('../img/bg-contact.jpg');
+    background-position: right center;
+}
+
+.contact-bg {
     background-color: #3b5f6f;
 }
 
@@ -248,26 +405,20 @@ a.contact-email {
     color: white;
 }
 
-@media only screen 
-    and (max-width: 1000px) {
-        .content-design, .content-consultoria {
-            display: block;
-        }
+.menu-text-contact-container {
+    top: 30%;
+    left: 5%;
+    transform: translateX(-5%); */
+}
 
-        .page-title-services {
-            text-align: center;
-            min-height: 0px;
-        }
+span.menu-contact-contact {
+    font-size: 60px;
+}
 
-        .page-title-services img {
-            padding: 36px 28px 0px 28px;
-        }
-
-        .vertical-line {
-            border: 0px;
-            margin: 0px !important;
-        }
-    }
+span.menu-contact-phone {
+    display: block;
+    font-size: 20px;
+}
 
 /* Portrait and Landscape */
 @media only screen 
@@ -280,10 +431,8 @@ a.contact-email {
         }
 
         .bg, .menu-item {
-            height: 100%;
             width: 100%;
-            /*            display: flex;*/
-
+            height: auto;
         }
 
         .page {
@@ -320,7 +469,7 @@ a.contact-email {
         .second-description {
             padding: 0px 28px 36px 28px;
         }
-        
+
         .description, .second-description {
             width: 100%;
         }
@@ -335,21 +484,14 @@ a.contact-email {
         }
 
         .left-arrow {
-            top: 70px;
-            left: 10px;
-            position: absolute;
-            z-index: 1;
-        }
+            left: 10px;        }
 
         .left-arrow img {
             width: 50%;
         }
 
         .right-arrow {
-            top: 70px;
             right: 10px;
-            position: absolute;
-            z-index: 1;
         }
 
         .right-arrow img {
@@ -358,65 +500,94 @@ a.contact-email {
 
         .column {
             width: 100%;
+            float: none;    
         }
-        
+
         .page-title-who img {
             max-width: 226px;
         }
-        
+
         .page-title-contact img {
             max-width: 222px;
         }
-        
+
         .page-title-projects img {
             max-width: 337px;
         }
-        
+
         .page-title-casa-vila-nova img {
             max-width: 379px;
         }
-        
+
         .page-title-casa-jardim-europa img {
             max-width: 289px;
         }
-        
+
         .page-title-cobertura-duplex img {
             max-width: 341px;
         }
-        
+
         .page-title-alizee img {
             max-width: 249px;
         }
-        
+
         .page-title-casa-vila img {
             max-width: 235px;
         }
-        
+
         .page-title-media img {
             max-width: 281px;
         }
-        
+
         .page-title-design img {
             max-width: 220px;
         }
-        
+
         .page-title-consultoria img {
             max-width: 224px;
         }
-        
+
         .media-bg {
             background-color: #3b5f6f;
         }
-        
-        .projects-bg {
-            background-color: #b07f20;
-        }
-        
-        .contact-bg {
-            background-color: #3b5f6f;
-        }
-    }
 
+        .main-image-container {
+            /*            height: auto;*/
+        }
+
+        .main-image-container .box {
+            height: 100%;
+            text-align: center;
+        }
+
+        .main-image-container img {
+            width: 100%;
+        }
+
+        .footer-text {
+            bottom: 10px;
+            text-align: center;
+            width: 100%;
+            right: 0px;
+            font-size: 12px;
+        }
+}
+
+@media only screen 
+    and (max-width: 1000px) {
+        .design-bg, .consultoria-bg {
+            display: block;
+        }
+
+        .page-title-services {
+            text-align: center;
+            min-height: 0px;
+        }
+
+        .page-title-services img {
+            padding: 36px 28px 0px 28px;
+        }
+}
 
 @font-face{ 
     font-family: 'roboto-light-webfont';
@@ -425,4 +596,17 @@ a.contact-email {
         url('../fonts/roboto-light-webfont.woff') format('woff'),
         url('../fonts/roboto-light-webfont.ttf') format('truetype'),
         url('../fonts/roboto-light-webfont.svg#webfont') format('svg');
+}
+
+@font-face {
+    font-family: 'robotothin';
+    src: url('../fonts/roboto-thin-webfont.eot');
+    src: url('../fonts/roboto-thin-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/roboto-thin-webfont.woff2') format('woff2'),
+        url('../fonts/roboto-thin-webfont.woff') format('woff'),
+        url('../fonts/roboto-thin-webfont.ttf') format('truetype'),
+        url('../fonts/roboto-thin-webfont.svg#robotothin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
