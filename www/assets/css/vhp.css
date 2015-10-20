@@ -18,12 +18,6 @@ html, body {
     overflow: hidden;
 }
 
-.projects-row {
-    height: 32%;
-    padding: 0px;
-    overflow: hidden;
-}
-
 .container-fluid {
     width: 100%;
     height: 100%;
@@ -584,10 +578,6 @@ span.menu-contact-phone {
 @media screen and ( min-height: 800px ){
     .bg-image {
         height: 75%;
-    }
-    
-    .projects-row {
-        height: 35%;
     }
 }
 
