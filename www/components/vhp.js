@@ -4,7 +4,8 @@ angular.module('vhp', ['ionic']).config(['$stateProvider', '$urlRouterProvider',
 
     $stateProvider.state('menu', {
         url: "/menu",
-        templateUrl: "components/menu/menu.html"
+        templateUrl: "components/menu/menu.html",
+        controller: 'menu as vm'
     }).state('quem', {
         url: "/quem",
         templateUrl: "components/who/who.html"
