@@ -159,7 +159,7 @@ html, body {
 }
 
 .description {
-    padding: 36px 20px;
+    padding: 15px 20px;
     width: 65%;
     display: table-cell;
     vertical-align: middle;
@@ -172,7 +172,7 @@ html, body {
 
 .vertical-line {
     width: 1px;
-    margin: 36px 0px;
+    margin: 15px 0px;
     display: table-cell;
 }
 
@@ -267,6 +267,10 @@ span.menu-projects-projects {
 
 .design-bg {
     background-color: #467c77;
+}
+
+.vertical-line-design {
+    border-left: 1px solid #77c7c0;
 }
 
 .design-description {
@@ -397,6 +401,10 @@ span.menu-media-releases {
 
 .contact-bg {
     background-color: #3b5f6f;
+}
+
+.vertical-line-contact {
+    border-left: 1px solid #528aa2;
 }
 
 a.contact-email {
